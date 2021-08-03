@@ -1,0 +1,43 @@
+/* Nav styles */
+.ct-nav{
+    display: flex;
+    justify-content: center;
+}
+
+
+ul#horizontal-list{
+    min-width: 55vw;
+    list-style: none;
+    padding-top: 2.4vw;
+}
+
+#horizontal-list li, #horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color: black;
+} 
+
+/* End of Nav Styles */
+
+/* Start of Header */
+#header{
+    padding: 2vw;
+}
+
+.header-image{
+    width: 20%;
+}
+
+
+
+
+/* Footer Starts */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vw;
+}
+
+/* Footer Ends */
