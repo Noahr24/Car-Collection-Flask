@@ -12,30 +12,39 @@
 </head>
 <body>
 
-<!-- Navbar Starts Here -->
-<nav class="ct-nav">
-    <div>
-        <ul id="horizontal-list">
-            <a href="">
-                <li>Total Collection</li>
-            </a>
-            <a href="">
-                <li>Best Cars</li>
-            </a>
-            <a href="">
-                <li>Profile</li>
-            </a>
-            <a href="">
-                <li>Sign In</li>
-            </a>
-            <a href="">
-                <li>Sign Up</li>
-            </a>
-        </ul>
-    </div>
-</nav>
+    <!-- Navbar goes here -->
+    <nav class="ct-nav">
+        <div>
+            <img src="" alt="">
+        </div>   
+        
+        <!-- Nav items begin here -->
 
-<!-- End of Navbar -->
+        <div>
+            <ul id="horizontal-list">
+                <a href="">
+                    <li>The Perfect Car Collection</li>
+                </a>
+                <a href="">
+                    <li>Luxuxy</li>
+                </a>
+                <a href="">
+                    <li>Profile</li>
+                </a>
+                <a href="">
+                    <li>Log Out</li>
+                </a>
+                <a href="{{ url_for('auth.signin') }}">
+                    <li>Sign in</li>
+                </a>
+                <a href="{{ url_for('auth.signup') }}">
+                    <li>Sign Up Free</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- End of Nav -->
 
 {% block content %}
 
@@ -44,47 +53,7 @@
 
 {% endblock content %}
 
-<!-- Footer starts -->
-<footer class="row" id="footer">
-    <div class="col-3 col-md-3">
-        <img src="" alt="">
-    </div>
-    <div class="col-3_col-md-3">
-        <div class="footer">
-            <h4>Luxury Cars</h4>
-                <p>Lamborghini</p>
-                <p>Ferrari</p>
-                <p>Bugatti</p>
-                <p>Audi</p>
-        </div>
-    </div>
-    <div class="col-3_col-md-3">
-        <div class="footer">
-            <h4>Information</h4>
-                <p>Information</p>
-                <p>Information</p>
-                <p>Information</p>
-                <p>Information</p>
-        </div>
-    </div>
-    <div class="col-3_col-md-3">
-        <div class="footer">
-            <h4>Other Information</h4>
-                <p>Sign in</p>
-                <p>Sign up</p>
-                <p>Click Here</p>
-                <p>Click Here</p>
-        </div>
-    </div>
 
-
-
-
-
-</footer>
-
-
-<!-- Footer ends -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
 </body>
