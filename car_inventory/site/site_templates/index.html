@@ -1,6 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<!-- Flask Flashed messages to the User -->
+{% with messages = get_flashed_messages(with_categories = True) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == 'user-created' %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ msg }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            {% elif cat == 'auth-success' %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ msg }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
 
 
 <div class="container">
