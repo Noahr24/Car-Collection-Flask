@@ -28,17 +28,20 @@
                 <a href="">
                     <li>Luxuxy</li>
                 </a>
-                <a href="">
-                    <li>Profile</li>
-                </a>
-                <a href="">
-                    <li>Log Out</li>
-                </a>
-                <a href="{{ url_for('auth.signin') }}">
-                    <li>Sign in</li>
-                </a>
-                <a href="{{ url_for('auth.signup') }}">
-                    <li>Sign Up Free</li>
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('site.profile') }}">
+                        <li>Profile</li>
+                    </a>
+                    <a href="{{ url_for('site.home') }}">
+                        <li>Log Out</li>
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('auth.signin') }}">
+                        <li>Sign in</li>
+                    </a>
+                    <a href="{{ url_for('auth.signup') }}">
+                        <li>Sign Up Free</li>
+                {% endif %}
                 </a>
             </ul>
         </div>
